@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- stable
+npm: true
+cache:
+  directories:
+  - node_modules
+script:
+- npm run lint
+- npm run build
+- npm test
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: pTJ54RR55pnGAcnp9i2XgOkajhpTVGEPHz4T1qEDKVlDh7ghLpgB9kHp5JKZq59JQQPQJxbMSH8Lj1sYxuF6oovRMo6f5EevHEuGVMfMmiG4X3yQtb/SrEVx0tVhxqzOKGuC361z5jI+F9evIvEqUmfB8I8KaHwl/xK1kNc5SfKC1r9GexXIbJXQVEZxzIFq4wUbGxSacYcrq/JR2jArSrhWuPlNzwRCjB9UPGueXfJSoaqHNiKwJGTtVsruS5VFBTihft00h2Ubt/VoDxcjM6Ip+y/G/2ch7QMBYqJclOvrUYtIcr3rdydZ6cU7wTFdNI0oQavT7uviNKji8o9tSu2BzDRiP8OZ1HcZR5btKGBFvt8xgopviNAiaQwfM6M4v9PV/md2WRoXah0XKXyqjZ1tjTsBAHRSYXqmIluSdEWeT0dBF1JXIud/qTpcImsUpxf0Qp87fbFmZoVW95ISQMPrTkWWtF9U/a81B/e/5EPkV25m7zRkLX+Ltsd/kLqp53CPCV7SHg2RADgYSOpBgwM5JDepjmplyCBT0zJN46WqBoCc5Frq0JaxAwJYE6GTeqiz32lVXuej9LVa7zE/N9KQSgHW10OIbmTdlKnZtR/EOzrkkQTLX7uCfB5K+vPRG+tQA6MZTfPrPGCeGU/yv5A5u1t06H2/Pski3o3kgBA=
+  app: bitsprice
+  on:
+    repo: andydurette/bitsprice
+    branch: master

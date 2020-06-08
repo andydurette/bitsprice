@@ -6,7 +6,7 @@ import Prices from '../components/Prices';
 const Index = (props) => (
     <Layout>
       <div>
-        <h1>Current Bitcoin rate</h1>
+        <h1>The current Bitcoin rate</h1>
         {props.bpi.time.updated}
         <Prices bpi={props.bpi} />
       </div>
