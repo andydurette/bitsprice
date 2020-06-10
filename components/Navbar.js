@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 const Navbar = () => (
-  <nav className="navbar navbar-expand navbar-dark bg-dark mb-4">
+  <nav className="navbar navbar-expand navbar-dark bg-dark mb-4" >
     <div className="container">
-      <a className="navbar-brand" href="#">BitsPrice</a>
+      <a className="navbar-brand" href="#" data-testid="bitcoin-link" >BitsPrice</a>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
