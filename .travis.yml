@@ -2,13 +2,15 @@ language: node_js
 node_js:
 - stable
 npm: true
+notifications:
+  email:
+    on_success: never
+    on_failure: always
 cache:
   directories:
   - node_modules
 script:
-- npm run lint
-- npm run build
-- npm test
+- npm run heroku-prebuild
 deploy:
   provider: heroku
   skip_cleanup: true

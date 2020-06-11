@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build"
+    "heroku-prebuild": "echo This shows presetup is occuring"
   },
   "keywords": [],
   "author": "",
