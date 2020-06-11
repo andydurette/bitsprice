@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 
-const About = () => {
+const Battlegrid = () => {
 
 	return (
 		<React.Fragment>
@@ -9,11 +9,13 @@ const About = () => {
 				<title>About</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<section id="about">
-				<Navbar />
+			
+			<section id="battlegrid">
+				<Navbar/>
+      	<iframe id="battlegrid-iframe" src="https://dnd-tabletop.herokuapp.com/"></iframe>
 			</section>
-			</React.Fragment>
+		</React.Fragment>
 	);
 };
 
-export default About;
+export default Battlegrid;

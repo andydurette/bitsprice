@@ -1,21 +1,17 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const Navbar = () => (
-  <nav className="navbar navbar-expand navbar-dark bg-dark mb-4" >
-    <div className="container">
-      <a className="navbar-brand" href="#" data-testid="bitcoin-link" >BitsPrice</a>
-      <div className="collapse navbar-collapse">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <Link href="/"><a className="nav-link">Home</a></Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/about"><a className="nav-link">About</a></Link>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+	<div>
+		<header className="header">
+			<h1 className="logo" ><Link href="/"><a className="nav-link" data-testid="nav-logo" >DnD</a></Link></h1>
+			<ul className="main-nav">
+				<li><Link href="/"><a className="nav-link">Home</a></Link></li>
+				<li><Link href="/about"><a className="nav-link">About</a></Link></li>
+				<li><Link href="/map"><a className="nav-link">Map</a></Link></li>
+				<li><Link href="/battlegrid"><a className="nav-link">Battlegrid</a></Link></li>
+			</ul>
+		</header> 
+	</div>
 );
 
 export default Navbar;

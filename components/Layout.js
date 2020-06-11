@@ -1,18 +1,20 @@
-import Head from 'next/head';
-import Navbar from './Navbar';
+import Head from "next/head";
+import PropTypes from "prop-types";
 
 const Layout = (props) => (
-  <div>
-    <Head>
-      <title>BitsPrice</title>  
-      <link rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/cerulean/bootstrap.min.css" />
-    </Head>
-    <Navbar />
-    <div className="container"> 
-      {props.children}
-    </div>
-  </div>
+	<div>
+		<Head>
+			<title>Fantasy Setting</title>  
+		</Head>
+		
+		<div id="mainContainer" className="container"> 
+			{props.children}
+		</div>
+	</div>
 );
+
+Layout.propTypes = {
+	children: PropTypes.any,
+};
 
 export default Layout;
