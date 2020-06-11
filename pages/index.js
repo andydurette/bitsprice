@@ -1,22 +1,26 @@
-import Head from "next/head";
-import Navbar from "../components/Navbar";
+import Fetch from  'isomorphic-unfetch';
+import Layout from '../components/Layout';
+import Prices from '../components/Prices';
 
-const Home = () => {
+const Index = (props) => (
+    <Layout>
+      <div>
+        <h1>The Current Bitcoin rate</h1>
+        {props.bpi.time.updated}
+        <Prices bpi={props.bpi} />
+      </div>
+    </Layout>
+  );
 
-	return (
-		<React.Fragment>
-			<Head>
-				<title>Home</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<section id="homepage">
-				<Navbar />
-				<div id="homepage-content">
-					<h1>Wecolme to the world of Demian Arata</h1>
-				</div>
-			</section>
-		</React.Fragment>
-	);
-};
+  Index.getInitialProps = async function() {
+    const res = await fetch
+    ('https://api.coindesk.com/v1/bpi/currentprice.json');
+    const data = await res.json();
 
-export default Home;
+    return {
+      bpi: data
+    };
+  }
+
+
+export default Index

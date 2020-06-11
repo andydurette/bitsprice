@@ -1,19 +1,14 @@
-import Head from "next/head";
-import Navbar from "../components/Navbar";
+import Layout from '../components/Layout';
 
 const About = () => {
+  return (
+    <Layout>
+      <div>
+        <h1>About BitsPrice</h1>
+        <p>Application to view bitcoin prices.</p>
+      </div>
+    </Layout>
+  )
+}
 
-	return (
-		<React.Fragment>
-			<Head>
-				<title>About</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<section id="about">
-				<Navbar />
-			</section>
-			</React.Fragment>
-	);
-};
-
-export default About;
+export default About
